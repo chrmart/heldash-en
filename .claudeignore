@@ -1,0 +1,33 @@
+﻿# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+frontend/dist/
+backend/dist/
+
+# Logs
+*.log
+logs/
+
+# Runtime & temp
+.git/
+*.db
+*.db-shm
+*.db-wal
+
+# Docker
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env*
+
+# Recyclarr config files
+*.yaml
+/recyclarr/

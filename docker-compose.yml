@@ -1,0 +1,16 @@
+services:
+  heldash:
+    image: ghcr.io/kreuzbube88/heldash:latest
+    container_name: heldash
+    restart: unless-stopped
+    ports:
+      - "8282:8282"
+    volumes:
+      - /mnt/cache/appdata/heldash:/data
+    environment:
+      # Required for JWT signing. Generate with: openssl rand -hex 32
+      - SECRET_KEY=CHANGE_ME_GENERATE_A_RANDOM_SECRET
+      # false = HTTP (direct LAN access), true = HTTPS (behind nginx-proxy-manager with SSL)
+      - SECURE_COOKIES=false
+      # debug | info | warn | error
+      - LOG_LEVEL=info

@@ -1,0 +1,410 @@
+{
+  "common": {
+    "save": "Speichern",
+    "saving": "Speichern…",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "refresh": "Aktualisieren",
+    "upload": "Hochladen",
+    "loading": "Laden…",
+    "error": "Fehler",
+    "success": "Erfolgreich",
+    "yes": "Ja",
+    "no": "Nein",
+    "none": "Keine",
+    "unknown": "Unbekannt",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "online": "Online",
+    "offline": "Offline",
+    "on": "An",
+    "off": "Aus",
+    "back": "← Zurück",
+    "next": "Weiter →",
+    "page_of": "Seite {{current}} / {{total}}",
+    "entries": "{{count}} Einträge",
+    "name": "Name",
+    "type": "Typ",
+    "status": "Status",
+    "today": "Heute"
+  },
+  "topbar": {
+    "light_mode": "Hell",
+    "dark_mode": "Dunkel",
+    "check_apps": "Alle Apps prüfen",
+    "edit_dashboard": "Dashboard bearbeiten",
+    "done_editing": "Fertig",
+    "add_app": "App",
+    "add_widget": "Widget",
+    "add_row": "Reihe",
+    "guest_mode": "Gast-Ansicht",
+    "exit_guest_mode": "Gast-Ansicht beenden",
+    "add_instance": "Instanz hinzufügen",
+    "add_widget_btn": "Widget hinzufügen",
+    "add_app_btn": "App hinzufügen",
+    "add_ha_instance": "HA-Instanz",
+    "add_panel": "Panel",
+    "login": "Anmelden",
+    "logout": "Abmelden"
+  },
+  "settings": {
+    "tabs": {
+      "general": "Allgemein",
+      "design": "Design",
+      "users": "Benutzer",
+      "groups": "Gruppen",
+      "oidc": "OIDC / SSO"
+    },
+    "general": {
+      "title": "Allgemein",
+      "dashboard_title": "Dashboard-Titel",
+      "appearance": "Erscheinungsbild",
+      "appearance_hint": "Nutze den Theme-Schalter (☀/🌙) und die Akzentfarb-Punkte in der Topbar.",
+      "current": "Aktuell",
+      "auto_theme": "Automatisches Theme",
+      "auto_theme_label": "Hell/Dunkel automatisch nach Tageszeit wechseln",
+      "light_from": "☀ Hell ab",
+      "dark_from": "🌙 Dunkel ab",
+      "auto_theme_hint": "Das Theme wechselt minütlich. Der manuelle Schalter funktioniert weiterhin.",
+      "integrations": "Integrationen",
+      "integrations_hint": "API-Schlüssel für externe Dienste.",
+      "tmdb_key": "TMDB API-Schlüssel",
+      "tmdb_key_hint": "Aktiviert den Discover-Tab in Media.",
+      "tmdb_key_link": "Kostenlosen Schlüssel holen",
+      "tmdb_key_placeholder": "TMDB API-Schlüssel einfügen (v3 Auth)",
+      "app_groups": "App-Gruppen",
+      "no_groups": "Noch keine Gruppen.",
+      "new_group_placeholder": "Neuer Gruppenname",
+      "setup_wizard": "Einrichtungsassistent",
+      "setup_wizard_hint": "Den Einrichtungsassistenten erneut starten.",
+      "launch_wizard": "Einrichtungsassistent starten"
+    },
+    "localization": {
+      "title": "Lokalisierung",
+      "hint": "Sprache, Datum-/Uhrzeitformat und Einheiten. Änderungen wirken sofort auf die Uhr in der Topbar.",
+      "language": "Sprache & Region",
+      "language_hint": "Steuert Datum & Uhrzeit-Formatierung (z.B. Monatsnamen, Datumsreihenfolge).",
+      "time_format": "Uhrzeitformat",
+      "time_format_24h_sub": "14:30:00",
+      "time_format_12h_sub": "2:30:00 PM",
+      "temp_unit": "Temperatureinheit",
+      "temp_unit_hint": "Wird von Temperatursensoren in Widgets und Home-Assistant-Entitäten verwendet."
+    },
+    "design": {
+      "appearance": "Erscheinungsbild",
+      "corner_style": "Eckenform",
+      "bg_blur": "Hintergrundunschärfe",
+      "layout": "Layout & Dichte",
+      "spacing": "Abstand",
+      "sidebar_style": "Sidebar-Stil",
+      "motion": "Animation",
+      "animation_level": "Animationsstufe",
+      "animation_hint": "Reduziert und Keine respektieren auch prefers-reduced-motion.",
+      "backgrounds": "Hintergrundbilder",
+      "backgrounds_hint": "Hintergrundbilder hochladen und Benutzergruppen zuweisen (Einstellungen → Gruppen).",
+      "bg_name_placeholder": "Name des Hintergrunds",
+      "choose_image": "Bild auswählen",
+      "max_size": "Max 10 MB",
+      "custom_css": "Benutzerdefiniertes CSS",
+      "custom_css_warning": "Falsches CSS kann die Oberfläche beschädigen",
+      "custom_css_placeholder": "/* Eigene CSS-Überschreibungen hier einfügen */",
+      "custom_css_hint": "Gilt global für alle Benutzer."
+    },
+    "users": {
+      "title": "Benutzer",
+      "no_users": "Keine Benutzer geladen.",
+      "you": "Du",
+      "add_user": "Benutzer hinzufügen",
+      "username": "Benutzername *",
+      "first_name": "Vorname *",
+      "last_name": "Nachname *",
+      "email": "E-Mail (optional)",
+      "group": "Gruppe",
+      "password": "Passwort (min. 8 Zeichen) *",
+      "last_login": "Letzter Login",
+      "new_password": "Neues Passwort (optional)",
+      "password_placeholder": "Leer lassen zum Beibehalten",
+      "password_min": "Passwort min. 8 Zeichen",
+      "no_group": "— keine Gruppe —"
+    },
+    "groups": {
+      "title": "Benutzergruppen",
+      "system": "System",
+      "full_access": "Vollzugriff",
+      "permissions": "Berechtigungen",
+      "close": "Schließen",
+      "apps": "Apps",
+      "media": "Medien",
+      "widgets": "Widgets",
+      "docker": "Docker",
+      "background": "Hintergrund",
+      "visibility": "Sichtbarkeit",
+      "none_configured": "Noch nicht konfiguriert.",
+      "docker_page": "Docker-Seite in Sidebar",
+      "docker_page_hint": "Zugriff auf die Docker-Container-Seite erlauben",
+      "docker_widget": "Docker-Übersichts-Widget",
+      "docker_widget_hint": "Docker-Übersichts-Widgets auf dem Dashboard anzeigen",
+      "dashboard_background": "Dashboard-Hintergrund",
+      "no_background": "— Kein Hintergrund —",
+      "no_backgrounds": "Noch keine Hintergrundbilder. Hinzufügen unter Einstellungen → Allgemein.",
+      "group_name": "Gruppenname",
+      "description": "Beschreibung (optional)"
+    },
+    "oidc": {
+      "title": "OIDC / SSO",
+      "hint": "OIDC/SSO-Integration wird hier konfiguriert — nicht über Umgebungsvariablen.",
+      "coming_soon": "In einer zukünftigen Version verfügbar."
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "services": "Apps",
+    "media": "Medien",
+    "widgets": "Widgets",
+    "docker": "Docker",
+    "home_assistant": "Home Assistant",
+    "logbuch": "Logbuch",
+    "network": "Netzwerk",
+    "backup": "Backup",
+    "unraid": "Unraid",
+    "settings": "Einstellungen",
+    "about": "Über"
+  },
+  "services": {
+    "no_history": "Keine Verlaufsdaten"
+  },
+  "backup": {
+    "title": "Backup Center",
+    "tabs": {
+      "overview": "Übersicht",
+      "guide": "Leitfaden"
+    },
+    "add_source": "Quelle hinzufügen",
+    "export_docker": "Docker exportieren",
+    "no_sources_title": "Keine Backup-Quellen",
+    "no_sources_hint": "Füge Backup-Quellen hinzu um ihren Status zu überwachen",
+    "add_first": "Erste Quelle hinzufügen",
+    "refresh": "Aktualisieren",
+    "status": {
+      "ok": "OK",
+      "stale": "Veraltet",
+      "errors": "Fehler",
+      "error": "Fehler",
+      "unknown": "Unbekannt",
+      "last_run": "Zuletzt",
+      "size": "Größe"
+    },
+    "modal": {
+      "add_title": "Backup-Quelle hinzufügen",
+      "edit_title": "Quelle bearbeiten",
+      "name_required": "Name und Typ sind erforderlich",
+      "save_error": "Fehler beim Speichern",
+      "name_placeholder": "Mein Backup",
+      "log_path": "Log-Pfad",
+      "username": "Benutzer",
+      "password": "Passwort",
+      "password_placeholder": "Passwort",
+      "backup_path": "Backup-Pfad",
+      "enabled": "Aktiviert"
+    },
+    "types": {
+      "ca_backup": "Liest das CA Backup Plugin Log von Unraid",
+      "duplicati": "Verbindet sich mit der Duplicati Web-UI",
+      "kopia": "Verbindet sich mit dem Kopia-Server",
+      "docker": "Exportiert Container-Konfigurationen als JSON",
+      "vm": "Prüft Backup-Dateien in einem lokalen Pfad"
+    },
+    "toast": {
+      "removed": "{{name}} entfernt",
+      "docker_downloaded": "Docker-Export heruntergeladen",
+      "export_failed": "Export fehlgeschlagen"
+    },
+    "disabled": "Deaktiviert"
+  },
+  "network": {
+    "wol": "Wake-on-LAN senden"
+  },
+  "logbuch": {
+    "tabs": {
+      "activity": "Aktivitäten",
+      "uptime": "Uptime",
+      "sync": "Sync-Verlauf",
+      "resources": "Ressourcen"
+    },
+    "time_filters": {
+      "today": "Heute",
+      "7days": "7 Tage",
+      "30days": "30 Tage"
+    },
+    "activity": {
+      "unstable_services": "Instabile Services",
+      "offline_today": "× offline heute",
+      "no_activity": "Noch keine Aktivitäten aufgezeichnet",
+      "no_entries": "Keine Einträge für die gewählten Filter"
+    },
+    "uptime": {
+      "title": "Uptime Übersicht",
+      "updated": "Aktualisiert",
+      "sort": "Sortierung",
+      "total": "Gesamt",
+      "avg_7d": "Ø Uptime 7 Tage",
+      "few": "Wenig",
+      "many_errors": "Viel / Fehler"
+    },
+    "sync": {
+      "no_history": "Kein Sync-Verlauf vorhanden",
+      "no_changes": "Keine Änderungen",
+      "no_changelog": "Kein Änderungsprotokoll",
+      "created": "+{{count}} erstellt",
+      "updated": "{{count}} aktualisiert",
+      "deleted": "{{count}} gelöscht"
+    },
+    "resources": {
+      "data_points": "{{count}} Messpunkte",
+      "no_data": "Noch keine Ressourcen-Daten vorhanden.",
+      "no_data_hint": "Daten werden minütlich aufgezeichnet — bitte warte einen Moment.",
+      "load_error": "Fehler beim Laden",
+      "1h": "1 Std.",
+      "24h": "24 Std.",
+      "7d": "7 Tage"
+    },
+    "health": {
+      "total": "Gesamt",
+      "docker_unavailable": "Docker: nicht verfügbar",
+      "no_sync": "Kein Sync",
+      "last_sync_ok": "Letzter Sync erfolgreich",
+      "last_sync_failed": "Letzter Sync fehlgeschlagen",
+      "reachable": "erreichbar"
+    },
+    "notifications": {
+      "label": "Benachrichtigungen"
+    }
+  },
+  "unraid": {
+    "tabs": {
+      "overview": "Übersicht",
+      "array": "HDD",
+      "docker": "Docker",
+      "vms": "VMs",
+      "shares": "Freigaben",
+      "notifications": "Benachrichtigungen",
+      "system": "System"
+    },
+    "array": {
+      "started": "Array gestartet",
+      "stopped": "Array gestoppt",
+      "parity_started": "Parity Check gestartet",
+      "parity_cancelled": "Parity Check abgebrochen",
+      "disk_spun_up": "Disk hochgefahren",
+      "disk_spun_down": "Disk heruntergefahren",
+      "disk_mounted": "Disk gemountet",
+      "disk_unmounted": "Disk geunmountet",
+      "no_caches": "Keine Cache-Pools konfiguriert.",
+      "no_parity_history": "Keine Parity-Historie vorhanden",
+      "physical_drives": "Physische Laufwerke",
+      "no_physical_drives": "Keine physischen Laufwerke gefunden.",
+      "spinning": "Aktiv",
+      "standby": "Standby",
+      "headers": {
+        "type": "Typ",
+        "name": "Name",
+        "device": "Gerät",
+        "size": "Größe",
+        "status": "Status",
+        "temp": "Temp",
+        "usage": "Belegung",
+        "actions": "Aktionen",
+        "interface": "Schnittstelle",
+        "smart": "SMART"
+      }
+    },
+    "docker": {
+      "no_containers": "Keine Container gefunden"
+    },
+    "vms": {
+      "no_vms": "Keine VMs konfiguriert auf diesem Server."
+    },
+    "shares": {
+      "no_shares": "Keine Freigaben gefunden"
+    },
+    "notifications": {
+      "unread": "Ungelesen",
+      "archive": "Archiv",
+      "mark_read": "Als gelesen markieren",
+      "mark_all_read": "Alle als gelesen markieren",
+      "archiving": "Wird archiviert…",
+      "no_archive": "Kein Archiv vorhanden",
+      "no_unread": "Keine ungelesenen Benachrichtigungen",
+      "archive_error": "Fehler beim Archivieren",
+      "archive_all_error": "Fehler beim Archivieren aller Benachrichtigungen"
+    },
+    "system": {
+      "license": "Lizenz",
+      "registered_for": "Registriert für",
+      "license_type": "Lizenztyp",
+      "active": "Aktiv",
+      "invalid": "Ungültig",
+      "manufacturer": "Hersteller",
+      "platform": "Plattform",
+      "os": "Betriebssystem",
+      "cores_threads": "Kerne / Threads",
+      "total_ram": "RAM gesamt",
+      "motherboard": "Mainboard",
+      "ram_table": {
+        "slot": "Slot",
+        "size": "Größe",
+        "type": "Typ",
+        "speed": "Speed",
+        "manufacturer": "Hersteller",
+        "part": "Part-Nr."
+      }
+    },
+    "instance": {
+      "enabled": "Aktiviert",
+      "disabled": "Deaktiviert"
+    },
+    "toast": {
+      "enable": "Aktiviert",
+      "disable": "Deaktiviert"
+    }
+  },
+  "ha": {
+    "history": {
+      "title": "Verlauf",
+      "time_header": "Zeit",
+      "state_header": "Status",
+      "no_data": "Keine Verlaufsdaten verfügbar.",
+      "load_error": "Fehler beim Laden",
+      "hours": {
+        "6h": "6h",
+        "24h": "24h",
+        "7d": "7T",
+        "30d": "30T"
+      }
+    },
+    "floorplan": {
+      "mode": "Modus",
+      "current": "aktuell",
+      "run": "Ausführen",
+      "scene_or_script": "Szene / Script"
+    }
+  },
+  "changelog": {
+    "load_error": "Fehler beim Laden"
+  },
+  "onboarding": {
+    "widgets": {
+      "server_status": { "name": "Server Status", "desc": "CPU, RAM, Disk-Auslastung" },
+      "adguard": { "name": "AdGuard / Pi-hole", "desc": "DNS-Blocking-Statistiken" },
+      "calendar": { "name": "Kalender", "desc": "Geplante Releases" },
+      "home_assistant": { "name": "Home Assistant", "desc": "Smart-Home-Entitäten" }
+    },
+    "ungruppiert": "Ohne Raum"
+  }
+}

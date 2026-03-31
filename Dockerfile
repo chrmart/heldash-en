@@ -1,0 +1,56 @@
+# ─── Stage 1: Build Frontend ────────────────────────────────────────────────
+FROM node:20-alpine AS frontend-builder
+
+WORKDIR /app/frontend
+
+COPY frontend/package*.json ./
+RUN npm install
+
+COPY frontend/ ./
+RUN npm run build
+
+# ─── Stage 2: Build Backend ─────────────────────────────────────────────────
+FROM node:20-alpine AS backend-builder
+
+WORKDIR /app/backend
+
+RUN apk add --no-cache python3 make g++
+
+COPY backend/package*.json ./
+RUN npm install
+
+COPY backend/ ./
+RUN npm run build
+
+# ─── Stage 3: Production Image ──────────────────────────────────────────────
+FROM node:20-alpine AS production
+
+# Install dependencies for better-sqlite3
+RUN apk add --no-cache python3 make g++
+
+WORKDIR /app
+
+# Copy backend build
+COPY --from=backend-builder /app/backend/dist ./dist
+COPY --from=backend-builder /app/backend/node_modules ./node_modules
+COPY --from=backend-builder /app/backend/package.json ./
+
+# Copy frontend build into backend's public folder
+COPY --from=frontend-builder /app/frontend/dist ./public
+
+# Data directory (mounted from host)
+RUN mkdir -p /data
+
+# Environment variables with defaults
+ENV NODE_ENV=production \
+    PORT=8282 \
+    DATA_DIR=/data \
+    LOG_LEVEL=info
+
+EXPOSE 8282
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+  CMD wget -qO- http://127.0.0.1:8282/api/health || exit 1
+
+CMD ["node", "dist/server.js"]

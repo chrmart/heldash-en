@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>heldash</Name>
+  <Repository>ghcr.io/kreuzbube88/heldash:latest</Repository>
+  <Registry>https://ghcr.io/kreuzbube88/heldash</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Kreuzbube88/heldash/issues</Support>
+  <Project>https://github.com/Kreuzbube88/heldash</Project>
+  <ReadMe>https://github.com/Kreuzbube88/heldash/blob/main/README.md</ReadMe>
+  <Overview>HELDASH — A personal homelab dashboard with a clean glass morphism design.
+Features: Service monitoring, Docker management, Home Assistant integration,
+Recyclarr/CF Manager, activity logging and more.
+Bug reports and feature requests welcome via GitHub Issues.</Overview>
+  <Category>Productivity: Tools: MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:8282]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Kreuzbube88/heldash/main/heldash.xml</TemplateURL>
+  <Icon>https://github.com/Kreuzbube88/heldash/blob/main/frontend/public/favicon.png?raw=true</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="8282" Default="8282" Mode="tcp"
+    Description="Port for the HELDASH web interface"
+    Type="Port" Display="always" Required="true" Mask="false">8282</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/heldash" Mode="rw"
+    Description="Database and persistent configuration storage"
+    Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/heldash</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro"
+    Description="Docker socket for container management and monitoring"
+    Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="SECRET_KEY" Target="SECRET_KEY" Default="" Mode=""
+    Description="Required: random secret for session encryption. Generate with: openssl rand -hex 32"
+    Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="SECURE_COOKIES" Target="SECURE_COOKIES" Default="false" Mode=""
+    Description="Set to false for local HTTP access. Set to true when using HTTPS via reverse proxy."
+    Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="info" Mode=""
+    Description="Log verbosity: debug, info, warn, error"
+    Type="Variable" Display="advanced" Required="false" Mask="false">info</Config>
+  <Config Name="RECYCLARR_CONFIG_PATH" Target="RECYCLARR_CONFIG_PATH" Default="/recyclarr/recyclarr.yml" Mode=""
+    Description="Path to recyclarr.yml inside the Recyclarr container (optional)"
+    Type="Variable" Display="advanced" Required="false" Mask="false">/recyclarr/recyclarr.yml</Config>
+  <Config Name="RECYCLARR_CONTAINER_NAME" Target="RECYCLARR_CONTAINER_NAME" Default="recyclarr" Mode=""
+    Description="Name of your Recyclarr Docker container (optional)"
+    Type="Variable" Display="advanced" Required="false" Mask="false">recyclarr</Config>
+  <Config Name="Recyclarr Config Dir" Target="/recyclarr" Default="/mnt/user/appdata/recyclarr" Mode="rw"
+    Description="Path to your Recyclarr appdata directory (optional, required for Recyclarr integration)"
+    Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user/appdata/recyclarr</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode=""
+    Description="User ID for file permissions (Unraid default: 99)"
+    Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode=""
+    Description="Group ID for file permissions (Unraid default: 100)"
+    Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="Boot (CA Backup)" Target="/boot" Default="" Mode="ro"
+    Description="Optional: Nur für CA Backup Log-Überwachung erforderlich. Pfad: /boot"
+    Type="Path" Display="advanced" Required="false" Mask="false"></Config>
+  <TailscaleStateDir/>
+</Container>
