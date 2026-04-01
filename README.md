@@ -1,225 +1,207 @@
-# HELDASH
+HELDASH
+Personal homelab dashboard with glass morphism design. Manage services, Docker containers, media automation, Home Assistant and more — all in one interface.
 
-Persönliches Homelab-Dashboard mit Glass-Morphism Design.
-Verwalte Services, Docker-Container, Media-Automation,
-Home Assistant und mehr — alles in einer Oberfläche.
+⚠️ Use at your own risk
+This project was developed entirely with Claude Code (AI-assisted programming). It has not been manually reviewed by a professional developer. The code has not been audited for security vulnerabilities, production readiness, or best practices.
+It is explicitly NOT recommended to expose HELDASH publicly on the internet. The dashboard is intended exclusively for use on a local home network (LAN).
+Use entirely at your own risk.
 
-> ⚠️ **Nutzung auf eigenes Risiko**
->
-> Dieses Projekt wurde vollständig mit Claude Code (KI-gestützte Programmierung)
-> entwickelt. Es hat **keine manuelle Code-Review durch einen professionellen
-> Entwickler** stattgefunden. Der Code wurde nicht auf Sicherheitslücken,
-> Produktionsreife oder Best Practices geprüft.
->
-> **Es wird ausdrücklich NICHT empfohlen, HELDASH öffentlich im Internet
-> bereitzustellen.** Das Dashboard ist ausschließlich für den Einsatz im
-> lokalen Heimnetzwerk (LAN) gedacht.
->
-> Die Nutzung erfolgt vollständig auf eigenes Risiko.
 
----
+Features
+Dashboard
 
-## Sprache / Language
+🗂️ Modular grid — freely arrange apps, media instances and widgets
+📱 Fully responsive — optimized for desktop, tablet and mobile
+📏 Responsive grid — auto-fill layout adapts to screen size
+🧩 Widget strip — ungrouped widgets in their own area
+📦 Dashboard groups — named containers, 25–100% width, collapsible on mobile, drag & drop, double-click to rename
+✅ Dashboard & health-check toggles — one-click control
+🖱️ Edit mode — drag & drop with touch support on mobile
+📐 Placeholder tiles — reserve space and structure rows
+👥 Per-user dashboards — individual layout per user
+🔗 App tiles link directly to the service URL
+🔴 Live online/offline status indicators
 
-> 🇩🇪 Das Dashboard ist aktuell nur auf Deutsch verfügbar.
-> Contributions für weitere Sprachen (i18n) sind willkommen.
->
-> 🇬🇧 The dashboard is currently available in German only.
-> i18n contributions for additional languages are welcome.
+Navigation
 
----
+🖥️ Desktop: collapsible sidebar — icons + labels or icons only
+📱 Mobile: bottom navigation bar, respects user permissions
 
-## Features
+Apps
 
-**Dashboard**
-- 🗂️ Modulares Grid — Apps, Media-Instanzen und Widgets frei anordnen
-- 📱 Vollständig responsiv — Desktop, Tablet und Mobile optimiert
-- 📏 Responsives Grid — auto-fill Layout passt sich der Bildschirmgröße an
-- 🧩 Widget-Streifen — ungegruppierte Widgets in eigenem Bereich
-- 📦 Dashboard-Gruppen — benannte Container, Breite 25–100%,
-    kollabierbar auf Mobile, Drag & Drop, Doppelklick zum Umbenennen
-- ✅ Dashboard & Health-Check Toggles — Ein-Klick-Steuerung
-- 🖱️ Edit-Modus — Drag & Drop mit Touch-Unterstützung auf Mobile
-- 📐 Platzhalter-Kacheln — Platz reservieren und Reihen strukturieren
-- 👥 Per-User Dashboards — eigenes Layout pro Nutzer
-- 🔗 App-Kacheln verlinken direkt zur Service-URL
-- 🔴 Live Online/Offline-Statuspunkte
+📋 App list grouped by categories
+➕ Add, edit, delete with icon (PNG/JPG/SVG or emoji)
+🔁 Automatic health checks via HTTP — server-side scheduler (every 2 min), frontend reads every 30s
+🏷️ Tags and description per app
 
-**Navigation**
-- 🖥️ Desktop: kollabierbare Sidebar — Icons + Labels oder nur Icons
-- 📱 Mobile: Bottom-Navigation-Bar, respektiert Nutzerberechtigungen
+Media
 
-**Apps**
-- 📋 App-Liste gruppiert nach Kategorien
-- ➕ Hinzufügen, bearbeiten, löschen mit Icon (PNG/JPG/SVG oder Emoji)
-- 🔁 Automatische Health-Checks per HTTP — serverseitiger Scheduler (alle 2 min), Frontend liest alle 30s
-- 🏷️ Tags und Beschreibung pro App
+🎬 Radarr — movie stats, download queue, calendar
+📺 Sonarr — series stats, download queue, calendar
+🔍 Prowlarr — indexer list and 24h grab stats
+⬇️ SABnzbd — queue with progress bar, download history
+🖼️ Media cards inherit icons from matching app entries
+🔒 API keys server-side only
 
-**Media**
-- 🎬 Radarr — Film-Statistiken, Download-Queue, Kalender
-- 📺 Sonarr — Serien-Statistiken, Download-Queue, Kalender
-- 🔍 Prowlarr — Indexer-Liste und 24h-Grab-Statistiken
-- ⬇️ SABnzbd — Queue mit Fortschrittsbalken, Download-Verlauf
-- 🖼️ Media-Karten erben Icons von passenden App-Einträgen
-- 🔒 API-Keys ausschließlich serverseitig
+Seerr / Discover
 
-**Seerr / Discover**
-- 🔎 Discover-Tab — powered by TMDB: Trending-Filme und Serien
-- 🎛️ Erweiterte Filter — Genre, Streaming-Dienst, Sprache, Bewertung, Jahr
-- 🔀 Sortierung nach Popularität, Bewertung, Datum oder Titel
-- 📺 Echte Staffelauswahl — verfügbare/ausstehende/fehlende Staffeln
-- 📥 Filme und Staffeln direkt per Seerr requesten
-- 🟢 Intelligenter Request-Button — Live-Verfügbarkeit aus Seerr
-- ➕ Load more Pagination
+🔎 Discover tab — powered by TMDB: trending movies and series
+🎛️ Advanced filters — genre, streaming service, language, rating, year
+🔀 Sort by popularity, rating, date or title
+📺 Real season selection — available/pending/missing seasons
+📥 Request movies and seasons directly via Seerr
+🟢 Smart request button — live availability from Seerr
+➕ Load more pagination
 
-**Recyclarr**
-- 🔄 Recyclarr v8 GUI — recyclarr.yml automatisch generiert
-- ⚙️ Wizard für Ersteinrichtung, danach Verwaltung im Recyclarr-Tab
-- 📊 TRaSH CFs nach Custom Format Groups gruppiert — nur Profil-relevante Gruppen (≥50% Überschneidung) angezeigt
-- 🔍 CF-Suche filtert über alle Gruppen, klappt Treffer automatisch auf
-- 🎚️ Score-Overrides pro CF pro Profil + Heatmap-Ansicht
-- 📊 Profil-Vergleich bei mehreren Profilen (Unterschiede hervorgehoben)
-- 👤 Eigene CFs aus CF-Manager pro Profil aktivieren mit eigenem Score
-- 🛡️ reset_unmatched_scores + except + except_patterns (Regex)
-- ⏰ Sync-Zeitplan: manuell, täglich, wöchentlich oder Cron — Zeitplan wird sofort aktiv (kein Neustart)
-- 🔍 Score-Change Detection bei manuellen Änderungen in Radarr/Sonarr
-- 📜 Sync-Verlauf der letzten 10 Syncs mit Output auf Anfrage
-- 💾 Automatisches Config-Backup vor jedem Sync (max 5 Backups)
+Recyclarr
 
-**CF-Manager**
-- 📝 Eigene Custom Formats in Radarr/Sonarr erstellen, bearbeiten, löschen
-- ➕ Vollständiger Conditions-Editor (Schema direkt aus Arr-API geladen)
-- 📥 Import aus Radarr/Sonarr — erkennt automatisch welche CFs nicht von TRaSH kommen
-- 📤 Export einzelner CFs als JSON (kompatibel mit TRaSH Guides Format)
-- 📋 Vorlagen für alle Condition-Typen (Release-Titel, Sprache, Quelle, Auflösung, etc.)
-- 🔀 CF kopieren — innerhalb gleicher Instanz oder cross-service (Radarr ↔ Sonarr)
-- 🔒 Schutz vor Löschen aktiver Recyclarr-CFs
+🔄 Recyclarr v8 GUI — recyclarr.yml auto-generated
+⚙️ Setup wizard for initial configuration, then managed in the Recyclarr tab
+📊 TRaSH CFs grouped by custom format groups — only profile-relevant groups shown (≥50% overlap)
+🔍 CF search filters across all groups, auto-expands matches
+🎚️ Score overrides per CF per profile + heatmap view
+📊 Profile comparison across multiple profiles (differences highlighted)
+👤 Activate custom CFs from CF Manager per profile with custom score
+🛡️ reset_unmatched_scores + except + except_patterns (regex)
+⏰ Sync schedule: manual, daily, weekly or cron — schedule activates immediately (no restart needed)
+🔍 Score change detection on manual changes in Radarr/Sonarr
+📜 Sync history of last 10 syncs with output on demand
+💾 Automatic config backup before every sync (max 5 backups)
 
-**Docker**
-- 🐳 Live-Container-Liste mit CPU/RAM, State-Badges, Uptime
-- 📋 Sortierbare Container-Tabelle
-- 📊 Übersichtsleiste — Total / Running / Stopped / Restarting
-- 📜 Live-Log-Streaming per SSE (stdout + stderr)
-- ⚡ Echtzeit-Statusupdates via Docker Events stream (kein Polling)
-- ▶️ Start / Stop / Restart (nur Admins)
-- 🔒 Docker-Seitenzugriff per Gruppe konfigurierbar
+CF Manager
 
-**Logbuch**
-- 📋 Zentrales Monitoring-Center — alle Aktivitäten an einem Ort
-- 💯 Homelab Health Score (0–100) — berechnet aus Services, Docker, Recyclarr, HA
-- 📅 Ereignis-Kalender — GitHub-Graph-Stil, letzten 84 Tage
-- 🔔 Anomalie-Erkennung — instabile Services automatisch markiert
-- 📊 Tabs: Aktivitäten | Uptime | Sync-Verlauf | Docker Events
-- 🔍 Filter nach Kategorie, Zeitraum und Freitext
-- 📈 Ressourcen-Verlauf — CPU, RAM, Netzwerk als 24h/7T Graph
-- 🌐 Netzwerk-Filter in Aktivitäten
-- 💾 Backup-Filter in Aktivitäten
-- 🔄 Erweiterbar — neue Integrationen (z.B. Unraid) als eigener Tab
+📝 Create, edit and delete custom formats in Radarr/Sonarr
+➕ Full conditions editor (schema loaded directly from Arr API)
+📥 Import from Radarr/Sonarr — automatically detects CFs not from TRaSH
+📤 Export individual CFs as JSON (compatible with TRaSH Guides format)
+📋 Templates for all condition types (release title, language, source, resolution, etc.)
+🔀 Copy CFs — within same instance or cross-service (Radarr ↔ Sonarr)
+🔒 Protection against deleting active Recyclarr CFs
 
-**Netzwerk**
-- 🌐 Netzwerk-Geräte überwachen — Ping via TCP, Status-History 7 Tage
-- 📡 IP-Scanner — Subnetz scannen (CIDR, max /22), Geräte direkt hinzufügen
-- 🔌 Wake-on-LAN — Geräte per Magic Packet aufwecken
-- 📊 Geräte-Gruppen — benannte Kategorien, 24h Uptime-Verlauf pro Gerät
-- 🔔 Statuswechsel im Aktivitäten-Feed (Netzwerk-Filter)
+Docker
 
-**Backup Center**
-- 💾 Zentrale Backup-Übersicht — CA Backup, Duplicati, Kopia, Docker, VMs
-- 🐳 Docker Config Export — alle Container-Konfigurationen als JSON sichern
-- ⚠️ Automatische Warnungen wenn Backup > 7 Tage alt
-- 📖 Integrierter Leitfaden: Unraid vollständig sichern (3-2-1 Regel,
-    CA Backup, Duplicati, Kopia, Datenbanken, Disaster Recovery)
+🐳 Live container list with CPU/RAM, state badges, uptime
+📋 Sortable container table
+📊 Overview bar — total / running / stopped / restarting
+📜 Live log streaming via SSE (stdout + stderr)
+⚡ Real-time status updates via Docker events stream (no polling)
+▶️ Start / stop / restart (admins only)
+🔒 Docker page access configurable per group
 
-**Unraid Integration**
-- 💽 Array & Disk-Übersicht — Status, Auslastung, SMART-Daten pro Disk
-- 🐳 Docker Container Management — Start/Stop/Restart direkt aus HELDASH
-- 🖥️ VM Management — Status, Start/Stop/Force-Stop
-- 🔔 Unraid Notifications — System-Benachrichtigungen direkt im Dashboard
-- 📊 System-Metriken — RAM-Auslastung, Uptime, Parity-Status
+Logbook
 
-**Home Assistant**
-- 🏠 Multi-Instanz-Support (hinzufügen/bearbeiten/löschen/testen)
-- 🔍 Entity-Browser — Domain-Filter-Tabs + Suche
-- 🃏 Panel-Grid — domain-aware Karten, Echtzeit-WebSocket, Drag & Drop
-- 💡 Lichter — Toggle, Helligkeit, Farbtemperatur
-- 🌡️ Klima — Ist- + Zieltemperatur, HVAC-Modus
-- 🎵 Media Player — Steuerung, Lautstärke, Quellauswahl, Album-Cover
-- 🪟 Cover — Öffnen/Stopp/Schließen + Positions-Slider
-- 📊 Sensoren — Wert mit Einheit, zuletzt aktualisiert (schreibgeschützt)
-- ▶️ Scripts & Szenen — Aktions-Button
-- ⚡ Energie-Dashboard — Solar, Netz, Autarkie-Chart,
-    Heute / Diese Woche / Dieser Monat
-- 🏠 Räume/Areas — Panels nach HA-Bereichen gruppieren,
-    automatische Raum-Erkennung aus Entity-Registry
-- 🗺️ Grundriss — Etagen-/Außenbereiche mit Bild-Upload, Entities platzieren,
-    Live-State via WebSocket (Lichter pulsieren, Sensoren etc.)
-- 🔒 Lock-Karten — PIN-gesichertes Öffnen/Schließen
-- 🚨 Alarm-Karten — Scharf/Deaktivieren mit PIN
-- 🔔 HA Alerts — Entity-Zustandsänderungen als Toast-Benachrichtigung
-- 🎬 Szenarien — HA Szenen + Scripts direkt ausführen
-- 📈 Entity-Verlauf — 24h/7T Graph für alle Entity-Typen (Recharts)
-- 👥 Presence Tracking — Personen-Status + optionale GPS-Karte (OpenStreetMap)
-- 🔒 Long-Lived Access Tokens ausschließlich serverseitig
+📋 Central monitoring center — all activity in one place
+💯 Homelab health score (0–100) — calculated from services, Docker, Recyclarr, HA
+📅 Event calendar — GitHub graph style, last 84 days
+🔔 Anomaly detection — unstable services automatically flagged
+📊 Tabs: Activity | Uptime | Sync History | Docker Events
+🔍 Filter by category, time range and free text
+📈 Resource history — CPU, RAM, network as 24h/7d graph
+🌐 Network filter in activity
+💾 Backup filter in activity
+🔄 Extensible — new integrations (e.g. Unraid) as separate tabs
 
-**Widgets**
-- 🖥️ Server Status — Live CPU, RAM, Festplatten (Linux-Host)
-- 🛡️ AdGuard Home — DNS-Statistiken, Blockierrate, Schutz-Toggle
-- 🕳️ Pi-hole — DNS-Statistiken, Blockierrate, Schutz-Toggle
-- 🐳 Docker Overview — Container-Counts + Steuerung
-- 🔐 Nginx Proxy Manager — Proxies, Zertifikate, Ablauf-Warnungen
-- 🏠 Home Assistant Widget — Entity-States überall
-- ⚡ HA Energy Widget — kompakte Energie-Zusammenfassung
-- 📅 Kalender-Widget — kombinierte Radarr/Sonarr Upcoming-Releases
-- 📊 Pinbar in Topbar für Schnellübersicht
-- 🔄 Live-Polling — alle Widgets aktualisieren automatisch
+Network
 
-**Dashboard & UX**
-- ➕ Quick-Actions in Topbar — kontextsensitiver Add-Button pro Seite
-- 🎓 Onboarding-Wizard — geführte Ersteinrichtung beim ersten Start
-- 👁️ Gast-Sichtbarkeits-Overlay — Admin sieht direkt welche Elemente für Gäste sichtbar sind
+🌐 Monitor network devices — ping via TCP, status history 7 days
+📡 IP scanner — scan subnets (CIDR, max /22), add devices directly
+🔌 Wake-on-LAN — wake devices via magic packet
+📊 Device groups — named categories, 24h uptime history per device
+🔔 Status changes in the activity feed (network filter)
 
-**Auth & Zugriff**
-- 🔑 Lokale Nutzer-Authentifizierung — Admin-Setup beim ersten Start
-- 👥 Nutzergruppen (Admin, Gast + eigene)
-- 👁️ Per-Gruppe Sichtbarkeit für Apps, Media und Widgets
-- 🐳 Per-Gruppe Docker-Berechtigungen
-- 🎨 Gäste können Theme lokal ändern
-- 🛠️ Admin "Gast-Modus"
+Backup Center
 
-**Design & Einstellungen**
-- 🎨 Design-Tab (nur Admins) — Ecken-Stil, Blur, Abstände, Sidebar-Stil,
-    Animationen, Custom CSS — gilt global für alle Nutzer
-- 🌓 Hell/Dunkel + 3 Akzentfarben (Cyan, Orange, Magenta)
-- 🕐 Auto-Theme — zeitbasierter Hell/Dunkel-Wechsel
-- 🖼️ Hintergrundbilder — Upload und Zuweisung pro Nutzergruppe
-- 🎬 TMDB API-Key Konfiguration
+💾 Central backup overview — CA Backup, Duplicati, Kopia, Docker, VMs
+🐳 Docker config export — back up all container configurations as JSON
+⚠️ Automatic warnings when backup is older than 7 days
+📖 Integrated guide: full Unraid backup (3-2-1 rule, CA Backup, Duplicati, Kopia, databases, disaster recovery)
 
-**Dokumentation**
-- 📖 Integriertes Doku-Center in der About-Seite
+Unraid Integration
 
-**Changelog**
-- 🎉 What's New Modal — erscheint automatisch nach Updates
-- 📋 Alle Releases direkt im Dashboard einsehbar
+💽 Array & disk overview — status, usage, SMART data per disk
+🐳 Docker container management — start/stop/restart directly from HELDASH
+🖥️ VM management — status, start/stop/force-stop
+🔔 Unraid notifications — system alerts directly in the dashboard
+📊 System metrics — RAM usage, uptime, parity status
 
-**Import/Export**
-- 📥 JSON Import/Export — Backup und Restore von Service-Konfigurationen
+Home Assistant
 
----
+🏠 Multi-instance support (add/edit/delete/test)
+🔍 Entity browser — domain filter tabs + search
+🃏 Panel grid — domain-aware cards, real-time WebSocket, drag & drop
+💡 Lights — toggle, brightness, color temperature
+🌡️ Climate — current + target temperature, HVAC mode
+🎵 Media player — controls, volume, source selection, album art
+🪟 Cover — open/stop/close + position slider
+📊 Sensors — value with unit, last updated (read-only)
+▶️ Scripts & scenes — action button
+⚡ Energy dashboard — solar, grid, self-sufficiency chart, today / this week / this month
+🏠 Rooms/areas — group panels by HA areas, automatic room detection from entity registry
+🗺️ Floorplan — floor/outdoor areas with image upload, place entities, live state via WebSocket (lights pulse, sensors, etc.)
+🔒 Lock cards — PIN-secured lock/unlock
+🚨 Alarm cards — arm/disarm with PIN
+🔔 HA alerts — entity state changes as toast notifications
+🎬 Scenes — run HA scenes + scripts directly
+📈 Entity history — 24h/7d graph for all entity types (Recharts)
+👥 Presence tracking — person status + optional GPS map (OpenStreetMap)
+🔒 Long-lived access tokens server-side only
 
-## Installation
+Widgets
 
-### Unraid Community Store (Empfohlen)
+🖥️ Server status — live CPU, RAM, disks (Linux host)
+🛡️ AdGuard Home — DNS stats, block rate, protection toggle
+🕳️ Pi-hole — DNS stats, block rate, protection toggle
+🐳 Docker overview — container counts + controls
+🔐 Nginx Proxy Manager — proxies, certificates, expiry warnings
+🏠 Home Assistant widget — entity states anywhere
+⚡ HA energy widget — compact energy summary
+📅 Calendar widget — combined Radarr/Sonarr upcoming releases
+📊 Pin bar in topbar for quick overview
+🔄 Live polling — all widgets update automatically
 
-HELDASH ist direkt über den **Unraid Community Applications Store** verfügbar.
-Im CA App Store nach **„HELDASH"** suchen und mit einem Klick installieren.
+Dashboard & UX
 
-Dann **http://server-ip:8282** öffnen.
-Beim ersten Start erscheint automatisch die Admin-Einrichtungsseite.
+➕ Quick actions in topbar — context-sensitive add button per page
+🎓 Onboarding wizard — guided setup on first launch
+👁️ Guest visibility overlay — admin sees directly which elements are visible to guests
 
-### Docker (Alternativ)
+Auth & Access
 
-```bash
-docker run -d \
+🔑 Local user authentication — admin setup on first launch
+👥 User groups (admin, guest + custom)
+👁️ Per-group visibility for apps, media and widgets
+🐳 Per-group Docker permissions
+🎨 Guests can change theme locally
+🛠️ Admin "guest mode"
+
+Design & Settings
+
+🎨 Design tab (admins only) — corner style, blur, spacing, sidebar style, animations, custom CSS — applies globally for all users
+🌓 Light/dark + 3 accent colors (cyan, orange, magenta)
+🕐 Auto-theme — time-based light/dark switching
+🖼️ Background images — upload and assign per user group
+🎬 TMDB API key configuration
+
+Documentation
+
+📖 Integrated docs center in the About page
+
+Changelog
+
+🎉 What's New modal — appears automatically after updates
+📋 All releases viewable directly in the dashboard
+
+Import/Export
+
+📥 JSON import/export — backup and restore service configurations
+
+
+Installation
+Unraid Community Store (Recommended)
+HELDASH is available directly through the Unraid Community Applications Store. Search for "HELDASH" in the CA App Store and install with one click.
+Then open http://server-ip:8282. On first launch the admin setup page appears automatically.
+Docker (Alternative)
+bashdocker run -d \
   --name heldash \
   -p 8282:8282 \
   -v /mnt/user/appdata/heldash:/data \
@@ -229,75 +211,37 @@ docker run -d \
   -e SECRET_KEY=$(openssl rand -hex 32) \
   -e SECURE_COOKIES=false \
   ghcr.io/kreuzbube88/heldash:latest
-```
+Or with docker-compose:
+bashdocker compose up -d
+Then open http://server-ip:8282. On first launch the admin setup page appears automatically.
 
-Oder mit docker-compose:
-```bash
-docker compose up -d
-```
+Security Notice
+⚠️ HELDASH is intended exclusively for local use on a home network.
 
-Dann **http://server-ip:8282** öffnen.
-Beim ersten Start erscheint automatisch die Admin-Einrichtungsseite.
+Do not expose publicly on the internet
+Run behind a reverse proxy (e.g. Nginx Proxy Manager) with SSL
+Set SECURE_COOKIES=true when behind HTTPS
+Always set SECRET_KEY: openssl rand -hex 32
 
----
 
-## Sicherheitshinweis
+Environment Variables
+VariableRequiredDefaultDescriptionSECRET_KEYYesinsecureJWT secret key. Use openssl rand -hex 32SECURE_COOKIESYesfalsefalse = HTTP local, true = HTTPS via reverse proxyPORTNo8282Web server listen portDATA_DIRNo/dataDatabase, icons, backgrounds, floorplan imagesLOG_LEVELNoinfodebug · info · warn · errorLOG_FORMATNoprettypretty = readable · json = for log aggregatorsRECYCLARR_CONFIG_PATHNo/recyclarr/recyclarr.ymlPath to recyclarr.yml (container perspective)RECYCLARR_CONTAINER_NAMENorecyclarrName of the Recyclarr Docker containerPUIDNo99User ID for file permissions (Unraid: 99)PGIDNo100Group ID for file permissions (Unraid: 100)
 
-⚠️ **HELDASH ist ausschließlich für den lokalen Einsatz im Heimnetzwerk gedacht.**
+Unraid
+Community Applications template: heldash.xml in the repository root.
+Important paths:
+Container pathHost path (default)Description/data/mnt/user/appdata/heldashDatabase + configuration/var/run/docker.sock/var/run/docker.sockDocker integration (ro)/recyclarr/mnt/user/appdata/recyclarrRecyclarr config (optional)/boot/bootCA Backup log access (optional, read-only)
 
-- Nicht öffentlich im Internet bereitstellen
-- Hinter Reverse Proxy (z.B. Nginx Proxy Manager) mit SSL betreiben
-- `SECURE_COOKIES=true` wenn hinter HTTPS
-- `SECRET_KEY` immer setzen: `openssl rand -hex 32`
+The /boot mount is only required if you want HELDASH to monitor CA Backup as a backup source. Configurable as an optional path in heldash.xml.
 
----
+Required fields on installation:
 
-## Umgebungsvariablen
+SECRET_KEY — generate with openssl rand -hex 32 in the terminal
+SECURE_COOKIES — false for local access, true with HTTPS
 
-| Variable | Pflicht | Standard | Beschreibung |
-|---|---|---|---|
-| `SECRET_KEY` | **Ja** | unsicher | JWT-Schlüssel. `openssl rand -hex 32` |
-| `SECURE_COOKIES` | **Ja** | `false` | `false` = HTTP lokal, `true` = HTTPS via Reverse Proxy |
-| `PORT` | Nein | `8282` | Listen-Port des Webservers |
-| `DATA_DIR` | Nein | `/data` | Datenbank, Icons, Hintergründe, Grundriss-Bilder |
-| `LOG_LEVEL` | Nein | `info` | `debug` · `info` · `warn` · `error` |
-| `LOG_FORMAT` | Nein | `pretty` | `pretty` = lesbar · `json` = für Log-Aggregatoren |
-| `RECYCLARR_CONFIG_PATH` | Nein | `/recyclarr/recyclarr.yml` | Pfad zur recyclarr.yml (Container-Perspektive) |
-| `RECYCLARR_CONTAINER_NAME` | Nein | `recyclarr` | Name des Recyclarr Docker-Containers |
-| `PUID` | Nein | `99` | User-ID für Dateiberechtigungen (Unraid: 99) |
-| `PGID` | Nein | `100` | Group-ID für Dateiberechtigungen (Unraid: 100) |
 
----
+Documentation
+Full documentation available directly in the dashboard under About.
 
-## Unraid
-
-Community Applications Template: **`heldash.xml`** im Repository-Root.
-
-**Wichtige Pfade:**
-| Pfad im Container | Host-Pfad (Standard) | Beschreibung |
-|---|---|---|
-| `/data` | `/mnt/user/appdata/heldash` | Datenbank + Konfiguration |
-| `/var/run/docker.sock` | `/var/run/docker.sock` | Docker-Integration (ro) |
-| `/recyclarr` | `/mnt/user/appdata/recyclarr` | Recyclarr Config (optional) |
-| `/boot` | `/boot` | CA Backup Log-Zugriff (optional, read-only) |
-
-> Der `/boot` Mount ist nur erforderlich wenn CA Backup als
-> Backup-Quelle in HELDASH überwacht werden soll.
-> In der heldash.xml als optionaler Pfad konfigurierbar.
-
-**Pflichtfelder bei Installation:**
-- `SECRET_KEY` — `openssl rand -hex 32` im Terminal generieren
-- `SECURE_COOKIES` — `false` für lokalen Zugriff, `true` bei HTTPS
-
----
-
-## Dokumentation
-
-Vollständige Dokumentation direkt im Dashboard unter **About**.
-
----
-
-## Hinweis zur Entwicklung
-
-Dieses Projekt wurde vollständig mit KI-Unterstützung (Claude Code) entwickelt.
-Keine professionelle Sicherheitsprüfung. **Nur im lokalen Heimnetzwerk nutzen.**
+Development Note
+This project was developed entirely with AI assistance (Claude Code). No professional security review has been conducted. Use on local home networks only.

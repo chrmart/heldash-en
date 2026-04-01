@@ -400,11 +400,58 @@
   },
   "onboarding": {
     "widgets": {
-      "server_status": { "name": "Server Status", "desc": "CPU, RAM, Disk-Auslastung" },
-      "adguard": { "name": "AdGuard / Pi-hole", "desc": "DNS-Blocking-Statistiken" },
-      "calendar": { "name": "Kalender", "desc": "Geplante Releases" },
-      "home_assistant": { "name": "Home Assistant", "desc": "Smart-Home-Entitäten" }
+      "server_status": {
+        "name": "Server Status",
+        "desc": "CPU, RAM, Disk-Auslastung"
+      },
+      "adguard": {
+        "name": "AdGuard / Pi-hole",
+        "desc": "DNS-Blocking-Statistiken"
+      },
+      "calendar": {
+        "name": "Kalender",
+        "desc": "Geplante Releases"
+      },
+      "home_assistant": {
+        "name": "Home Assistant",
+        "desc": "Smart-Home-Entitäten"
+      }
     },
-    "ungruppiert": "Ohne Raum"
+    "ungruppiert": "Ohne Raum",
+    "step_lang": {
+      "title": "Sprache wählen",
+      "hint": "Du kannst die Sprache jederzeit in den Einstellungen ändern."
+    },
+    "step_welcome": {
+      "title": "Willkommen bei HELDASH",
+      "body": "Dein persönliches Homelab-Dashboard. Lass uns in wenigen Schritten alles einrichten. Du kannst diesen Assistenten jederzeit in den Einstellungen erneut starten."
+    },
+    "step_services": {
+      "title": "Services hinzufügen",
+      "body": "Services sind Kacheln auf dem Dashboard — z.B. Radarr, Sonarr, Nginx etc. Du kannst eigene Icons, URLs und Beschreibungen hinterlegen.",
+      "configured_one": "{{count}} Service konfiguriert",
+      "configured_other": "{{count}} Services konfiguriert",
+      "add": "+ Service hinzufügen"
+    },
+    "step_media": {
+      "title": "Media-Instanzen verbinden",
+      "body": "Verbinde Radarr, Sonarr, Prowlarr und SABnzbd für detaillierte Stats, Kalender-Ansicht und Recyclarr-Integration.",
+      "configured_one": "{{count}} Instanz konfiguriert",
+      "configured_other": "{{count}} Instanzen konfiguriert",
+      "add": "+ Instanz hinzufügen"
+    },
+    "step_widgets": {
+      "title": "Widgets aktivieren",
+      "body": "Widgets zeigen Live-Daten in der Topbar, Sidebar oder auf dem Dashboard an.",
+      "hint": "Widgets → Seite \"Widgets\" → \"+ Widget hinzufügen\""
+    },
+    "step_done": {
+      "title": "Dashboard ist bereit!",
+      "body": "Du kannst jederzeit über das Dashboard weitere Services und Widgets hinzufügen. Der Einrichtungsassistent ist in den Einstellungen verfügbar."
+    },
+    "skip": "Überspringen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "finish": "Dashboard öffnen"
   }
 }

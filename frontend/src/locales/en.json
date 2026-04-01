@@ -400,11 +400,58 @@
   },
   "onboarding": {
     "widgets": {
-      "server_status": { "name": "Server Status", "desc": "CPU, RAM, disk usage" },
-      "adguard": { "name": "AdGuard / Pi-hole", "desc": "DNS blocking stats" },
-      "calendar": { "name": "Calendar", "desc": "Scheduled releases" },
-      "home_assistant": { "name": "Home Assistant", "desc": "Smart home entities" }
+      "server_status": {
+        "name": "Server Status",
+        "desc": "CPU, RAM, disk usage"
+      },
+      "adguard": {
+        "name": "AdGuard / Pi-hole",
+        "desc": "DNS blocking stats"
+      },
+      "calendar": {
+        "name": "Calendar",
+        "desc": "Scheduled releases"
+      },
+      "home_assistant": {
+        "name": "Home Assistant",
+        "desc": "Smart home entities"
+      }
     },
-    "ungruppiert": "Ungrouped"
+    "ungruppiert": "Ungrouped",
+    "step_lang": {
+      "title": "Choose Language",
+      "hint": "You can change the language at any time in Settings."
+    },
+    "step_welcome": {
+      "title": "Welcome to HELDASH",
+      "body": "Your personal homelab dashboard. Let's get everything set up in a few steps. You can restart this wizard at any time from Settings."
+    },
+    "step_services": {
+      "title": "Add Services",
+      "body": "Services are tiles on the dashboard — e.g. Radarr, Sonarr, Nginx etc. You can set custom icons, URLs and descriptions.",
+      "configured_one": "{{count}} service configured",
+      "configured_other": "{{count}} services configured",
+      "add": "+ Add Service"
+    },
+    "step_media": {
+      "title": "Connect Media Instances",
+      "body": "Connect Radarr, Sonarr, Prowlarr and SABnzbd for detailed stats, calendar view and Recyclarr integration.",
+      "configured_one": "{{count}} instance configured",
+      "configured_other": "{{count}} instances configured",
+      "add": "+ Add Instance"
+    },
+    "step_widgets": {
+      "title": "Enable Widgets",
+      "body": "Widgets display live data in the topbar, sidebar or on the dashboard.",
+      "hint": "Widgets → \"Widgets\" page → \"+ Add Widget\""
+    },
+    "step_done": {
+      "title": "Dashboard is ready!",
+      "body": "You can add more services and widgets at any time from the dashboard. The setup wizard is available in Settings."
+    },
+    "skip": "Skip",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Open Dashboard"
   }
 }
